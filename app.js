@@ -26,6 +26,10 @@ app.use('/lecturas', lecturasRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+// mongodb fesaragon:wP4I5n6RVM295whV
+// mongodb+srv://fesaragon:wP4I5n6RVM295whV@cluster0-p1uhr.gcp.mongodb.net/test?retryWrites=true&w=majority
+var mongoose = require('mongoose');
+mongoose.connect('mongodb+srv://fesaragon:wP4I5n6RVM295whV@cluster0-p1uhr.gcp.mongodb.net/biodigestor?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 // error handler
 app.use(function(err, req, res, next) {
